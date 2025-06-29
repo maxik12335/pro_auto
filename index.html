@@ -4,18 +4,109 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="libr/bootstrap.min.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Pro Auto</title>
 </head>
 <body>
+
+  <div class="modal-feedback">
+    <div class="modal-feedback__container">
+      <div class="modal-feedback-close">
+        <span></span>
+        <span></span>
+      </div>
+
+      <h2 class="modal-feedback__title">Оставить отзыв</h2>
+
+      <form action="/" method="post" class="modal-feedback__form">
+        <label class="modal-feedback-form__label" for="feedback-name">ФИО</label>
+        <input class="modal-feedback-form__input" type="text" name="feedback-name" id="feedback-name" required="" placeholder="Иванов Иван Иванович">
+        <p class="feedback-error" data-form-error-feedback-name="">Введите имя согласно шаблону "Иванов Иван Иванович"</p>
+
+        <label class="modal-feedback-form__label" for="feedback-tel">Телефон</label>
+        <input class="modal-feedback-form__input" type="tel" name="feedback-tel" id="feedback-tel" required="" placeholder="+7(999) 999 99 99">
+        <p class="feedback-error" data-form-error-feedback-tel="">Введите номер согласно шаблону "+7(999) 999 99 99"</p>
+
+        <label class="modal-feedback-form__label" for="feedback-text">Отзыв</label>
+        <textarea class="modal-feedback-form__input" name="" id=""></textarea>
+        <p class="feedback-error" data-form-error-feedback-text="">Введите номер согласно шаблону "+7(999) 999 99 99"</p>
+
+        <button class="modal-feedback__button" type="submit">отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-price">
+    <div class="modal-price__container">
+      <div class="modal-price-close">
+        <span></span>
+        <span></span>
+      </div>
+
+      <h2 class="modal-price__title">Оставить заявку</h2>
+
+      <form action="/" method="post" class="modal-price__form">
+        <label class="modal-price-form__label" for="name">ФИО</label>
+        <input class="modal-price-form__input" type="text" name="name" id="name" required placeholder="Иванов Иван Иванович">
+        <p class="form-error" data-form-error-name="">Введите имя согласно шаблону "Иванов Иван Иванович"</p>
+
+        <label class="modal-price-form__label" for="tel">Телефон</label>
+        <input class="modal-price-form__input" type="tel" name="tel" id="tel" required placeholder="+7(999) 999 99 99">
+        <p class="form-error" data-form-error-tel="">Введите номер согласно шаблону "+7(999) 999 99 99"</p>
+
+        <button class="modal-price__button" type="submit">отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="menu-fon">
+    <div class="menu-fon__container">
+      <video class="menu-fon-video" autoplay loop muted src="img/large.mp4"></video>
+      <div class="menu-fon-close">
+        <span></span>
+        <span></span>
+      </div>
+      <img class="menu-fon-img" src="img/logo.png" alt="">
+      <ul class="menu-fon-list">
+        <li class="menu-fon-list__item">
+          <a class="menu-fon-list__link" href="#price">Цены</a>
+        </li>
+        <li class="menu-fon-list__item">
+          <a class="menu-fon-list__link" href="#pluses">Наши плюсы</a>
+        </li>
+        <li class="menu-fon-list__item">
+          <a class="menu-fon-list__link" href="#dogovor">Договор</a>
+        </li>
+        <li class="menu-fon-list__item">
+          <a class="menu-fon-list__link" href="#faq">FAQ</a>
+        </li>
+        <li class="menu-fon-list__item">
+          <a class="menu-fon-list__link" href="#otsivy">Отзывы</a>
+        </li>
+        <li class="menu-fon-list__item">
+          <a class="menu-fon-list__link" href="#map">Как нас найти</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <nav class="header-top">
+    <img class="header-logo" src="img/logo.png" alt="">
+    <div class="header-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="header-tells">
+      <a class="header-tel" href="tel:+79539595117">+79539595117</a>
+      <a class="header-tel" href="tel:+79539595117">+79539595117</a>
+    </div>
+  </nav>
+
   <header class="header">
-    <a class="header-tel" href="tel:+79539595117">+79539595117</a>
     <div class="shadow"></div>
     <div class="container">    
-      <!-- <h1 class="header-title">
-        Автоподбор в Туле с гарантией результата
-      </h1> -->
-
       <h1 class="header-title">
         Автоподбор в Туле
       </h1>
@@ -25,27 +116,9 @@
         <span>тогда листай ниже</span>
       </h2>
 
-      <!-- <h2 class="header-subtitle">
-        Не знаешь как найти б/у авто ? Боишься отдать деньги за ведро и купить "кота в мешке" ? Не хочешь тратить на это время и нет опыта ? И не знаешь кому довериться ?
-      </h2> -->
-      
-      <!-- <p class="header-description">
-        Правильно, что боишься ! Мы это понимаем, знаем, видим, как люди, которые не разбираются выкидывают деньги на ветер. Хотят сами или сэкономить. А потом очень сильно жалеют. Не занимайтесь тем, в чем нет экспертизы ! Большой шанс потерять деньги !
-      </p> -->
-
-      <!-- <p class="header-description">
-        Знаем как подобрать б/у автомобиль под ключ и не выкинуть деньги на ветер, как это делают многие люди и потом жалеют. После обращаются к нам и уходят довольными ! Поэтому мы и решили заняться этим делом. С нами просто, легко, удобно потому что работаем под ключ по договору быстро и без лишних хлопот с бумагами с вашей стороны
-      </p> -->
-
-      <!-- <div class="header-arrows">
-        <p class="header-arrows__text">позвонили</p><span class="header-arrow">-></span>
-        <p class="header-arrows__text">договорились</p><span class="header-arrow">-></span>
-        <p class="header-arrows__text">получили то, что хотели</p>
-      </div> -->
-
-      <!-- <p class="header-footer">
-        Мы уже сэкономили 30 людям нервы, деньги и время. Каждый безумно доволен, ни у кого до сих пор нет поломок и не будет ! Потому что всё проверено лично
-      </p> -->
+      <p class="header-partner">Наши партнёры из Автосервиса "Drive"</p>
+      <img class="header-qr" src="img/qr.png" alt="">
+      <a class="header-link" href="https://mail.ru/" target="_blank">перейти</a>
     </div>
   </header>
 
@@ -61,7 +134,7 @@
 
       <div class="lists-box">
         <div class="list-box">
-          <h3 class="about-list-title">ищу сам</h3>
+          <h3 class="about-list-title">ИЩУ САМ</h3>
           <ul class="about-list">
             <li class="about-list__item">
               <img class="list-img" src="img/krest.png" alt="">
@@ -69,11 +142,11 @@
             </li>
             <li class="about-list__item">
               <img class="list-img" src="img/krest.png" alt="">
-              не договорят о дтп, тех проблемах, пробеге, юр проблемах. А оно тебе надо ?
+              продавцы не договаривают о дтп, технических проблемах, пробеге, юридических проблемах. А оно тебе надо ?
             </li>
             <li class="about-list__item">
               <img class="list-img" src="img/krest.png" alt="">
-              можно потратить много времени, так и не найти и купить, что придётся
+              можно потратить много времени, так и не найти нужный автомобиль и купить, что придётся
             </li>
             <li class="about-list__item">
               <img class="list-img" src="img/krest.png" alt="">
@@ -83,23 +156,23 @@
         </div>
   
         <div class="list-box">
-          <h3 class="about-list-title">довериться профи</h3>
+          <h3 class="about-list-title">ДОВЕРИТЬСЯ ПРОФИ</h3>
           <ul class="about-list">
             <li class="about-list__item">
               <img class="list-img" src="img/galka.png" alt="">
-              нет сложностей. Позвонил нам, договорились, привезли машину. Всё !
+              нет сложностей. Позвонили нам, договорились, подобрали автомобиль.
             </li>
             <li class="about-list__item">
               <img class="list-img" src="img/galka.png" alt="">
-              есть гарантия. Мы ни за что не отдадим авто в плохом состоянии. Лучше откажемся, если таковых машин нет
+              есть гарантия. Мы ни за что не подберем авто в плохом состоянии. Лучше откажемся, если таковых машин нет
             </li>
             <li class="about-list__item">
               <img class="list-img" src="img/galka.png" alt="">
-              экономия времени и денег. Мы все сделаем под ключ. Вы точно через нас получите авто в хорошем качестве
+              экономия времени и денег. Мы все сделаем под ключ
             </li>
             <li class="about-list__item">
               <img class="list-img" src="img/galka.png" alt="">
-              у нас всё надёжно и по договору. Не веришь ? Набери пока свободны ! Телефон в самом верху сайта
+              у нас всё надёжно и по договору. Не веришь ? Позвони нам ! Телефон в самом верху сайта
             </li>
           </ul>
         </div>
@@ -108,10 +181,10 @@
     </div>
   </section>
 
-  <section class="section price">
+  <section class="section price" id="price">
     <div class="container">
       <h2 class="price-title">Доступные честные и понятные цены</h2>
-      <p class="price-subtitle">Все цены говорим четко, честно перед самой работой. Ничего не скрываем. Работаем на репутацию</p>
+      <p class="price-subtitle">Работаем согласно заключенному договору</p>
       <ul class="price-list">
         <li class="price-list__item">
           <span class="price-list__usluga">Цена авто
@@ -149,12 +222,10 @@
     </div>
   </section>
 
-  <section class="section vstavka">
-    <div class="arrows-fon">
-      <div class="arrow-fon"></div>
-    </div>
+  <section class="section vstavka" id="pluses">
+    <div class="shadow"></div>
     <div class="container">
-      <p class="vstavka-title">Почему вообще мы, а не другие ?</p>
+      <p class="vstavka-title">Почему мы, а не другие ?</p>
       <p class="vstavka-subtitle">
         <span>
           С нами просто. У нас реальные гарантии, а не на словах (нет результата, ничего не плати. Всё честно. Ничего не теряешь)
@@ -165,7 +236,8 @@
       </p>
       <div class="vstavka-arrows">
         <p class="vstavka-arrows__text">позвонили</p><span class="vstavka-arrow">-></span>
-        <p class="vstavka-arrows__text">договорились</p><span class="vstavka-arrow">-></span>
+        <p class="vstavka-arrows__text">договорились</p><span class="vstavka-arrow hide-mobile">-></span>
+        <p class="vstavka-arrows__text">встретились</p><span class="vstavka-arrow">-></span>
         <p class="vstavka-arrows__text">получили то, что хотели</p>
       </div>
 
@@ -175,44 +247,494 @@
     </div>
   </section>
 
-  <section class="section questions">
+  <section class="section dogovor" id="dogovor">
+    <div class="container">
+      <img class="dogovor-img" src="img/dogovor.jpg" alt="">
+      <div class="dogovor-content">
+        <p class="dogovor-title">ознакомиться с договором</p>
+        <a class="dogovor-button" href="files/example.pdf" download="CustomFileName.pdf">
+          скачать
+          <div class="dogovor-button__fon"></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section questions" id="faq">
     <div class="container">
       <h2 class="questions-title">Часто задаваемые вопросы</h2>
       <ul class="questions-list">
         <li class="questions-list__item">
           <h3 class="questions-item-title">
-            Сколько времени занимает подбор автомобиля?
+            Как вы проводите осмотр автомобиля?
+            <button class="questions-button">+</button>
           </h3>
           <p class="questions-item-description">
-            В среднем подбор автомобиля занимает от одной недели до месяца
+            Мы проводим осмотр машин на подъемниках в собственных и партнерских сервисных центрах. Этот этап является заключительным при диагностики автомобиля.
           </p>
         </li>
         <li class="questions-list__item">
           <h3 class="questions-item-title">
-            Есть какие-то ограничения по подбору автомобилей?
+            Что делать, если подобранный автомобиль мне не нравится?
+            <button class="questions-button">+</button>
           </h3>
           <p class="questions-item-description">
-            Да, мы не берём в подбор авто старше 2015 года, так как у таких автомобилей, в силу возраста и пробега, велик риск возникновения неожиданных поломок, что делает предоставление гарантии невозможным. Чем старше машина, тем меньше вероятность найти живой экземпляр, который отвечал бы всем нашим строгим требованиям
+            У нас нет задачи навязывать Клиентам тот или иной автомобиль. Мы работаем, пока не получим результат, который вам понравится.
           </p>
         </li>
         <li class="questions-list__item">
           <h3 class="questions-item-title">
-            Можно ли оформить заявку дистанционно и не присутствовать на осмотрах?
+            А вдруг вы не сможете подобрать автомобиль, который мне нужен?
+            <button class="questions-button">+</button>
           </h3>
           <p class="questions-item-description">
-            Да, всё можно сделать дистанционно. Вся работа компании проводится дистанционно. По проверенным автомобилям будет предоставлен подробный отчет с фото/видео и описанием. Ваше присутствие потребуется только на финальном этапе, когда после всех наших проверок Вы ознакомитесь с предложенным вариантом и потребуется Ваша подпись в ПТС и ДКП автомобиля
+            Действительно, такое возможно. Но наш опыт и практика показывает, что в 99% случаев мы находим вариант, который соответствует запросу не более чем за два месяца.
           </p>
         </li>
         <li class="questions-list__item">
           <h3 class="questions-item-title">
-            Как происходит заключение договора?
+            Вы заключаете договор на подбор автомобиля?
+            <button class="questions-button">+</button>
           </h3>
           <p class="questions-item-description">
-            Для заключения достаточно набрать нам по номеру +79539595117. Менеджер всё подробно расскажет
+            Мы заключаем официальный договор на эту услугу.
           </p>
         </li>
       </ul>
     </div>
   </section>
+
+  <section class="section feedback" id="otsivy">
+    <h2 class="feedback-title">
+      Отзывы, которые помогают нам работать дальше
+    </h2>
+    <div class="shadow"></div>
+    <div class="container">
+      <div id="feedbackCarusel" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <p class="feedback-comment">
+                Быстро и качественно осмотрел заинтересовавший меня автомобиль. обнаружил серьезные недостатки, уберёг от покупки хлама. профессионал своего дела. рекомендую. спасибо
+              </p>
+              <p class="feedback-name">
+                Михаил
+              </p>
+              <p class="feedback-date">
+                6 ноября
+              </p>
+            </div>
+            <div class="carousel-item">
+              <p class="feedback-comment">
+                Спасибо Сергею! Оперативно откликнулся и осмотрел интересующий меня авто и выявил все недостатки
+              </p>
+              <p class="feedback-name">
+                Татьяна
+              </p>
+              <p class="feedback-date">
+                20 апреля
+              </p>
+            </div>
+            <div class="carousel-item">
+              <p class="feedback-comment">
+                Сергей отлично выполнил свою работу, на протяжении всего подбора был на связи и отвечал на все интересующие меня вопросы. Авто нашел в кротчайшие сроки. Советую.
+              </p>
+              <p class="feedback-name">
+                Даниил
+              </p>
+              <p class="feedback-date">
+                14 апреля
+              </p>
+            </div>
+            <div class="carousel-item">
+              <p class="feedback-comment">
+                Спасибо за помощь ! Отличные услуги, все оперативно и профессионально !
+              </p>
+              <p class="feedback-name">
+                Корпорация улыбок
+              </p>
+              <p class="feedback-date">
+                30 марта
+              </p>
+            </div>
+            <div class="carousel-item">
+              <p class="feedback-comment">
+                Хотела бы выразить Сергею благодарность за его профессиональный подход к работе. Все быстро, четко и по делу. Рекомендую его как специалиста !
+              </p>
+              <p class="feedback-name">
+                Марина Бабарыкина
+              </p>
+              <p class="feedback-date">
+                26 марта
+              </p>
+            </div>
+            <div class="carousel-item">
+              <p class="feedback-comment">
+                Быстро откликнулся на просьбу об осмотре авто и качественно произвел осмотр.Хороший специалист всем рекомендую.
+              </p>
+              <p class="feedback-name">
+                Александр
+              </p>
+              <p class="feedback-date">
+                19 марта
+              </p>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#feedbackCarusel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#feedbackCarusel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+      </div>
+      <button class="feedback-button">Оставить отзыв</button>
+    </div>
+  </section>
+
+  <section class="map" id="map">
+    <div class="container">
+      <img class="map-img" src="img/logo.png" alt="">
+
+      <div class="map-content">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=37.641301%2C54.206329&mode=whatshere&whatshere%5Bpoint%5D=37.641088%2C54.206322&whatshere%5Bzoom%5D=17&z=20.2"></iframe>
+        <div class="map-tells">
+          <a class="map-tel" href="tel:+79539595117">+79539595117</a>
+          <a class="map-tel" href="mailto:test@bk.ru">test@bk.ru</a>
+          <a class="map-tel" href="tel:+79539595117">+79539595117</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="libr/bootstrap.min.js"></script>
+  <script src="libr/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+  <script>
+    // MENU
+      const menu = document.querySelector('.header-menu')
+      const menuFon = document.querySelector('.menu-fon')
+      const menuClose = document.querySelector('.menu-fon-close')
+      const menuItems = document.querySelectorAll('.menu-fon-list__link')
+      const headerTop = document.querySelector('.header-top')
+      const headerMenuSpan = document.querySelectorAll('.header-menu span')
+      const headerTelScrolled = document.querySelectorAll('.header-tel')
+
+      menu.addEventListener('click', () => {
+        menuFon.style.display = 'flex'
+      })
+
+      menuClose.addEventListener('click', () => {
+        menuFon.style.display = 'none'
+      })
+
+      menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+          menuFon.style.display = 'none'
+        })
+      })
+
+      const header = document.querySelector('.header')
+
+      document.addEventListener('scroll', function() {
+        if (window.scrollY >= +getComputedStyle(header).height.slice(0, -2)) {
+          headerTop.classList.add('header-top-scrolled');
+          headerTelScrolled[0].classList.add('header-tel-scrolled');
+          headerTelScrolled[1].classList.add('header-tel-scrolled');
+          headerMenuSpan[0].classList.add('header-menu-span-scrolled');
+          headerMenuSpan[1].classList.add('header-menu-span-scrolled');
+          headerMenuSpan[2].classList.add('header-menu-span-scrolled');
+        } else {
+          headerTop.classList.remove('header-top-scrolled');
+          headerTelScrolled[0].classList.remove('header-tel-scrolled');
+          headerTelScrolled[1].classList.remove('header-tel-scrolled');
+          headerMenuSpan[0].classList.remove('header-menu-span-scrolled');
+          headerMenuSpan[1].classList.remove('header-menu-span-scrolled');
+          headerMenuSpan[2].classList.remove('header-menu-span-scrolled');
+        }
+      });
+
+    // Modal Feedback
+      const feedbackButton = document.querySelector('.feedback-button')
+      const modalFeedback = document.querySelector('.modal-feedback')
+      const feedbackButtonClose = document.querySelector('.modal-feedback-close')
+
+      feedbackButton.addEventListener('click', () => {
+        modalFeedback.style.display = 'flex'
+      })
+
+      feedbackButtonClose.addEventListener('click', () => {
+        modalFeedback.style.display = 'none'
+      })
+
+    // Modal Feedback Validation
+      const feedbackNameInput = document.querySelector('#feedback-name')
+      const feedbackPhoneInput = document.querySelector('#feedback-tel')
+      const feedbackTextInput = document.querySelector('#feedback-text')
+      const feedbackNameError = document.querySelector('[data-form-error-feedback-name]')
+      const feedbackPhoneError = document.querySelector('[data-form-error-feedback-tel]')
+      const feedbackTextError = document.querySelector('[data-form-error-feedback-text]')
+
+      function feedbackValidateName(name) {
+        if (name.startsWith(" ")) {
+          feedbackNameInput.value = feedbackNameInput.value.slice(0, -1)
+        }
+        // 1. Убираем пробелы в начале и конце строки
+        name = name.trim();
+
+        // 2. Проверяем отсутствие пробела в начале
+        if (name.startsWith(" ")) {
+          feedbackNameInput.value = feedbackNameInput.value.slice(0, -1)
+          return false; // Если начинается с пробела, то не валидно
+        }
+
+        // 3. Регулярное выражение (с учетом нескольких пробелов между словами)
+        const nameRegex = /^[А-ЯЁа-яё]{2,14}\s+[А-ЯЁа-яё]{2,14}\s+[А-ЯЁа-яё]{2,14}$/;
+
+        // 4. Проверка на соответствие регулярному выражению
+        return nameRegex.test(name);
+      }
+
+      function feedbackValidatePhone(phone) {
+        // Удаляем все символы, кроме цифр
+        let digitsOnly = phone.replace(/\D/g, '');
+        digitsOnly = digitsOnly.length > 11 ? digitsOnly.slice(0, -1) : digitsOnly
+        
+        // Обновляем значение поля ввода
+        feedbackPhoneInput.value = digitsOnly;
+
+        return digitsOnly.length > 10 ? true : false
+      }
+
+      feedbackNameInput.addEventListener('input', function() {
+        const nameValue = feedbackNameInput.value;
+
+        if (feedbackValidateName(nameValue)) {
+          feedbackNameError.textContent = '';
+          feedbackNameError.classList.remove('feedback-error-show');
+        } else {
+          feedbackNameError.textContent = 'Введите ФИО согласно шаблону';
+          feedbackNameError.classList.add('feedback-error-show');
+        }
+      });
+
+      feedbackPhoneInput.addEventListener('input', function() {
+        let phoneValue = feedbackPhoneInput.value;
+
+        if (feedbackValidatePhone(phoneValue)) {
+          feedbackPhoneError.classList.remove('feedback-error-show');
+        } else {
+          feedbackPhoneError.classList.add('feedback-error-show');
+        }
+      });
+
+      const formFeedback = document.querySelector('.modal-feedback__form')
+      formFeedback.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const isNameValid = feedbackValidateName(feedbackNameInput.value);
+        const isPhoneValid = feedbackValidatePhone(feedbackPhoneInput.value);
+
+        if (!isNameValid) {
+          feedbackNameError.textContent = 'Введите ФИО согласно шаблону';
+          feedbackNameInput.classList.add('feedback-error-show');
+        }
+        if (!isPhoneValid) {
+          feedbackPhoneError.textContent = 'Введите корректный номер телефона.';
+          feedbackPhoneInput.classList.add('feedback-error-show');
+        }
+
+        if (isNameValid && isPhoneValid) {
+          // Преобразуем FormData в обычный объект JavaScript
+          const formData = new FormData(formFeedback);
+          const formDataObject = {};
+          formData.forEach((value, key) => {
+            formDataObject[key] = value;
+          });
+
+          // 3. Преобразуем объект в JSON-строку
+          const jsonData = JSON.stringify(formDataObject);
+
+          // 4. Отправляем JSON на сервер с помощью fetch
+          fetch('your-server-endpoint', { // Замените на URL своего сервера
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json' // Указываем, что отправляем JSON
+            },
+            body: jsonData // Отправляем JSON-строку в теле запроса
+          })
+          .then(response => {
+            if (response.ok) {
+              return response.text(); // или response.json(), если сервер возвращает JSON
+            } else {
+              throw new Error('Ошибка отправки данных: ' + response.status);
+            }
+          })
+          .then(data => {
+            // Обработка успешного ответа от сервера
+            console.log(data)
+            form.reset(); // Очищаем форму
+          })
+          .catch(error => {
+            // Обработка ошибки
+            console.log(error.message)
+          });
+          } else {
+            console.log('Пожалуйста, исправьте ошибки в форме')
+          }
+      });
+
+
+    // Modal Price
+      const priceListItems = document.querySelectorAll('.price-list__item')
+      const modalPrice = document.querySelector('.modal-price')
+      const modalPriceClose = document.querySelector('.modal-price-close')
+
+      priceListItems.forEach(item => {
+        item.addEventListener('click', () => {
+          modalPrice.style.display = 'flex'
+          console.log('show')
+        })
+      })
+
+      modalPriceClose.addEventListener('click', () => {
+        modalPrice.style.display = 'none'
+      })
+
+    // Modal Price Validation
+      const nameInput = document.querySelector('#name')
+      const phoneInput = document.querySelector('#tel')
+      const nameError = document.querySelector('[data-form-error-name]')
+      const phoneError = document.querySelector('[data-form-error-tel]')
+
+      function validateName(name) {
+        if (name.startsWith(" ")) {
+          nameInput.value = nameInput.value.slice(0, -1)
+        }
+        // 1. Убираем пробелы в начале и конце строки
+        name = name.trim();
+
+        // 2. Проверяем отсутствие пробела в начале
+        if (name.startsWith(" ")) {
+          nameInput.value = nameInput.value.slice(0, -1)
+          return false; // Если начинается с пробела, то не валидно
+        }
+
+        // 3. Регулярное выражение (с учетом нескольких пробелов между словами)
+        const nameRegex = /^[А-ЯЁа-яё]{2,14}\s+[А-ЯЁа-яё]{2,14}\s+[А-ЯЁа-яё]{2,14}$/;
+
+        // 4. Проверка на соответствие регулярному выражению
+        return nameRegex.test(name);
+      }
+
+      function validatePhone(phone) {
+        // Удаляем все символы, кроме цифр
+        let digitsOnly = phone.replace(/\D/g, '');
+        digitsOnly = digitsOnly.length > 11 ? digitsOnly.slice(0, -1) : digitsOnly
+        
+        // Обновляем значение поля ввода
+        phoneInput.value = digitsOnly;
+
+        return digitsOnly.length > 10 ? true : false
+      }
+
+      nameInput.addEventListener('input', function() {
+        const nameValue = nameInput.value;
+
+        if (validateName(nameValue)) {
+          nameError.textContent = '';
+          nameError.classList.remove('form-error-show');
+        } else {
+          nameError.textContent = 'Введите ФИО согласно шаблону';
+          nameError.classList.add('form-error-show');
+        }
+      });
+
+      phoneInput.addEventListener('input', function() {
+        let phoneValue = phoneInput.value;
+
+        if (validatePhone(phoneValue)) {
+          phoneError.classList.remove('form-error-show');
+        } else {
+          phoneError.classList.add('form-error-show');
+        }
+      });
+
+      const formPrice = document.querySelector('.modal-price__form')
+      formPrice.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const isNameValid = validateName(nameInput.value);
+        const isPhoneValid = validatePhone(phoneInput.value);
+
+        if (!isNameValid) {
+          nameError.textContent = 'Введите ФИО согласно шаблону';
+          nameInput.classList.add('form-error-show');
+        }
+        if (!isPhoneValid) {
+          phoneError.textContent = 'Введите корректный номер телефона.';
+          phoneInput.classList.add('form-error-show');
+        }
+
+        if (isNameValid && isPhoneValid) {
+          // Преобразуем FormData в обычный объект JavaScript
+          const formData = new FormData(formPrice);
+          const formDataObject = {};
+          formData.forEach((value, key) => {
+            formDataObject[key] = value;
+          });
+
+          // 3. Преобразуем объект в JSON-строку
+          const jsonData = JSON.stringify(formDataObject);
+
+          // 4. Отправляем JSON на сервер с помощью fetch
+          fetch('your-server-endpoint', { // Замените на URL своего сервера
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json' // Указываем, что отправляем JSON
+            },
+            body: jsonData // Отправляем JSON-строку в теле запроса
+          })
+          .then(response => {
+            if (response.ok) {
+              return response.text(); // или response.json(), если сервер возвращает JSON
+            } else {
+              throw new Error('Ошибка отправки данных: ' + response.status);
+            }
+          })
+          .then(data => {
+            // Обработка успешного ответа от сервера
+            console.log(data)
+            form.reset(); // Очищаем форму
+          })
+          .catch(error => {
+            // Обработка ошибки
+            console.log(error.message)
+          });
+          } else {
+            console.log('Пожалуйста, исправьте ошибки в форме')
+          }
+      });
+
+    // FAQ
+      const questionsButtons = document.querySelectorAll('.questions-button')
+      const questionsDescriptions = document.querySelectorAll('.questions-item-description')
+      let questionsOpen = '';
+
+      questionsButtons.forEach((item, id) => {
+        item.addEventListener('click', () => {
+          if(![0,1,2,3].includes(questionsOpen)) {
+            questionsDescriptions[id].style.display = 'block'  
+          } else {
+            questionsDescriptions[questionsOpen].style.display = 'none'  
+            questionsDescriptions[id].style.display = 'block'  
+          }
+
+          questionsOpen = id
+        })
+      })
+  </script>
 </body>
 </html>
